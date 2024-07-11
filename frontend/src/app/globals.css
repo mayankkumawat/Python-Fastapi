@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.input{
+  color: #ffffff;
+  background-color: black;
+  width:90%;
+  border: 0.1rem solid #385b52ea;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  padding-inline: 1rem; 
+  font-size: medium;
+  height: 2.5rem;
+}
+
+.input:focus {
+  border:0.1rem solid #3ab194ea;
+  outline: none;
+}
+
+.input:active {
+  border:0.1rem solid #3ab194ea;
+  outline: none;
+}
+
+.heading{
+  color: #3ab194ea;
+}
+
+.btn{
+  background-color: #3ab194ea;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 0.7rem;
+  color: #fff;
+  margin-left: 1rem;
+  font-size: small;
+}
+
+.btn:active{
+  background-color: #385b52ea;
+}
+
+.ReactModal__Overlay{
+  background-color: #0000005e !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
